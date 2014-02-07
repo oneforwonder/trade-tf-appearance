@@ -1,25 +1,11 @@
 // ==UserScript==
-// @name        Fix Trade.tf
+// @name        Fix Trade.tf Appearance
+// @description Removes the slate color scheme and makes multiple other changes to trade.tf's appearance and layout
 // @namespace   https://github.com/rjn945
 // @include     http://www.trade.tf/*
-// @version     1
+// @version     0.1
 // @grant       none
 // ==/UserScript==
-
-//document.getElementsByTagName("link")[0].href = "//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css"
-
-// Notes labels
-//function replace-label() { 
-    //return "[" + $(this).text() + "]"; 
-    ////var e = $(this);
-    ////switch (e.text()) {
-        ////case "User notes":
-            ////return '<span class="open-quote">&#8220;</span>&nbsp;';
-        ////case "Caution":
-            ////return lab;
-    ////}
-    ////return "xxx";
-//}
 
 $(".trade-header-notes .label-info").replaceWith('<span class="open-quote">&#8220;</span>&#65279;');
 $(".trade-header-notes .label:contains('No notes')").replaceWith('<span class="no-notes">No notes</span>');
