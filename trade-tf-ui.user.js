@@ -8,7 +8,6 @@
 // ==/UserScript==
 
 var CHANGE_COLOR = true;
-var CHANGE_LABELS = true;
 var MOVE_PROFIT_LEFT = true;
 
 c = "";
@@ -73,14 +72,6 @@ if (CHANGE_COLOR) {
     c+= "table.price-summary td.price-footer { background-color: #cccccc; } ";
     c+= "table.price-summary td.price-price { border-right-width: 2px; } ";
 
-}
-
-if (CHANGE_LABELS) {
-    $(".trade-header-notes .label-info").replaceWith('<span class="open-quote">&#8220;</span>&#65279;');
-    $(".trade-header-notes .label:contains('No notes')").replaceWith('<span class="no-notes">No notes</span>');
-
-    c+= "div.trade-header-notes span.no-notes { margin-left: 5px; } ";
-    c+= "span.open-quote { float: left; font-size: 400%; height: 45px; margin-top: -20px; padding-top: 35px; margin-bottom: -50px; padding-right: 4px; } ";
 }
 
 if (MOVE_PROFIT_LEFT) {
